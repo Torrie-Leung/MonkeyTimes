@@ -6,6 +6,7 @@ const Rainbow = (WrappedComponent) => {
 
   const className = randomColour + '-text';
   return (props) => {
+    //console.log(props,'hoc return props');
     return(
       <div className={className}>
         <WrappedComponent {...props} />

@@ -2,9 +2,9 @@ import React from 'react'
 import { Link, NavLink, withRouter } from 'react-router-dom'
 
 const Nav = (props) => {
-  setTimeout(() => {
-    props.history.push('./about')
-  },2000);
+  // setTimeout(() => {
+  //   props.history.push('./about')
+  // },2000);
   return(
     <nav className="nav-wrapper green darken-3">
       <div className="container">
