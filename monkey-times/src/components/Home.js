@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import Pokeball from '../img/pokeball.png'
 
 //use class,functional components cannot use lifecycle hooks
 class Home extends Component {
@@ -22,9 +23,10 @@ class Home extends Component {
       posts.map(post => {
         return(
           <div className="post card" key={post.id}>
+            <img src={Pokeball} alt="A poke ball"/>
             <div className="card-content">
               <Link to={'/' + post.id}>
-                <span className="card-title">
+                <span className="card-title green-text">
                   {post.title}
                 </span>
               </Link>
@@ -37,7 +39,7 @@ class Home extends Component {
       <div className="center">No posts yet</div>
     )
       return(
-        <div className="container">
+        <div className="container home">
           <h4 className="center">Home</h4>
           {postList}
         </div>
