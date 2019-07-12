@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Nav from './components/Nav'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Link,Switch } from 'react-router-dom'
 import Home from './components/Home'
 import About from './components/About'
 import Contact from './components/Contact'
@@ -14,10 +14,13 @@ export class App extends Component {
       <Router>
         <div className="App">
           <Nav />
-          <Route exact path= '/' component={Home}/>
-          <Route path= '/about' component={About}/>
-          <Route path= '/contact' component={Contact}/>
-          <Route path='/:post_id' component={Post} />
+          <Switch>
+            <Route exact path= '/' component={Home}/>
+            <Route path= '/about' component={About}/>
+            <Route path= '/contact' component={Contact}/>
+            <Route path='/:post_id' component={Post} />
+          </Switch>
+          
         </div>
       </Router>
       
